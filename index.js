@@ -7,6 +7,10 @@ const fs = require('fs/promises');
 const app = express();
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send("It's working!");
+});
+
 app.post('/siigo-login', async (req, res) => {
   const body = req.body;
 
