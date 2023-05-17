@@ -11,11 +11,11 @@ app.get('/', (req, res) => {
   res.send("It's working!");
 });
 
-app.post('/siigo-login', async (req, res) => {
-  const body = req.body;
+app.get('/siigo/login', async (req, res) => {
+  const params = req.query;
 
   console.warn(
-    `Starting request with username ${body.username} - password ${body.password}`,
+    `Starting request with username ${params.username} - password ${params.password}`,
   );
 
   let browser = await puppeteer.launch({
@@ -28,10 +28,10 @@ app.post('/siigo-login', async (req, res) => {
   await page.goto('https://siigonube.siigo.com/ISIIGO2/Login.aspx');
 
   await page.waitForSelector('#ctl14_txtUserName');
-  await page.type('#ctl14_txtUserName', body.username);
+  await page.type('#ctl14_txtUserName', params.username);
 
   await page.waitForSelector('#ctl14_txtPassword');
-  await page.type('#ctl14_txtPassword', body.password);
+  await page.type('#ctl14_txtPassword', params.password);
 
   await Promise.all([
     page.waitForNavigation({}),
