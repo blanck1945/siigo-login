@@ -5,7 +5,9 @@
   "main": "src/deliveries/lambda.js",
   "scripts": {
     "start:dev": "sls offline --lambdaPort 3006",
-    "package": "serverless package"
+    "package": "serverless package",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Payana",
   "license": "ISC",
@@ -13,7 +15,8 @@
     "axios": "^1.2.3",
     "config": "^3.3.7",
     "copy-webpack-plugin": "^11.0.0",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "puppeteer": "^20.2.1"
   },
   "devDependencies": {
