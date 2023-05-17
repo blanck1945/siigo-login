@@ -1,0 +1,40 @@
+{
+  "name": "siigo-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/deliveries/lambda.js",
+  "scripts": {
+    "start:dev": "sls offline --lambdaPort 3006",
+    "package": "serverless package"
+  },
+  "author": "Payana",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "config": "^3.3.7",
+    "copy-webpack-plugin": "^11.0.0",
+    "dotenv": "^16.0.1",
+    "puppeteer": "^20.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-source-map-support": "^2.2.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "serverless": "^3.21.0",
+    "serverless-offline": "^9.0.0",
+    "serverless-webpack": "^5.8.0",
+    "webpack": "^5.74.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
